@@ -1,0 +1,27 @@
+{
+    "dependencies": {
+        "express": "^4.17.3"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    },
+    "scripts": {
+        "dev": "npm i --save && nodemon server.js",
+        "build": "npm i --save && node server.js"
+    },
+    "name": "s4f-project-02gqbriel",
+    "description": "",
+    "version": "1.0.0",
+    "main": "server.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bzz-fgict/s4f-project-02Gqbriel.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bzz-fgict/s4f-project-02Gqbriel/issues"
+    },
+    "homepage": "https://github.com/bzz-fgict/s4f-project-02Gqbriel#readme"
+}
