@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        var client = new WebSocket('ws://localhost:8000');
+
+        client.onopen = () => {
+            client.send('hello');
+        };
+
+        client.onmessage = (ev) => {
+            const s = document.createElement('span');
+            s.textContent = ' ' + JSON.stringify(ev.data);
+            document.querySelector('body').append(s);
+        };
+    </script>
+</head>
+
+<body>
+    <input type="text" />
+    <button>Send</button>
+    <script>
+        const i = document.querySelector('input');
+        const b = document.querySelector('button');
+
+        b.onclick = () => {
+            const v = i.value;
+            if (v.length != 0) {
+                client.send(v);
+            }
+        };
+    </script>
+</body>
+
+</html>
